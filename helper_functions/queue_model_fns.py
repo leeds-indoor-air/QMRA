@@ -115,8 +115,8 @@ def integrate_concentration( t0, t1, t, C, I, a, b ):
 
 def calculate_exposures( multiplier, arrive_depart, t, C, I, a, b ):
     E = []
-    for a, d, _ in arrive_depart:
-        E.append(multiplier * integrate_concentration( a, d, t, C, I, a, b ))
+    for mult, (a, d, _) in zip(multiplier, arrive_depart):
+        E.append(mult * integrate_concentration( a, d, t, C, I, a, b ))
     return E
 
 
