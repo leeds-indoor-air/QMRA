@@ -1,3 +1,4 @@
+import math as m
 '''
 From Duguid 1946 (via Excel model)
 '''
