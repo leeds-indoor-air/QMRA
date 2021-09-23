@@ -11,6 +11,11 @@ c_i = RNA->quanta conversion [quanta per RNA copy]
 c_v = sputum viral load [RNA copies per mL]
 
 RETURNS: quanta emission rate [quanta per hour]
+
+E.g.:
+
+quanta_emission_rate(1e9, 0.1, 'whispered counting', 'standing')
+
 '''
 import math as m
 
@@ -38,7 +43,6 @@ for act, val in N.items():
         nv += n*v
     NV[act] = nv
 
-print(NV)
 
 act_level_str = "activity level should be one of \'resting\', \'standing\', \'light exercise\', \'moderate exercise\' or \'heavy exercise\'"
 
