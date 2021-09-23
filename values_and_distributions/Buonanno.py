@@ -9,6 +9,8 @@ IR = inhalation rates (averaged over males & females) [m^3 h^-1] by activity_lev
 N = droplet concentrations for each d in D and expiratory activity [part cm^-3] by respiratory_activity
 c_i = RNA->quanta conversion [quanta per RNA copy]
 c_v = sputum viral load [RNA copies per mL]
+
+RETURNS: quanta emission rate [quanta per hour]
 '''
 import math as m
 
