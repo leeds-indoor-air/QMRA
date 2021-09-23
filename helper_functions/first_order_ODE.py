@@ -10,7 +10,6 @@ t.shape = (m,1) OR (1,)
 a.shape = b.shape = x0.shape = (1,n) OR (1,)
 '''
 def xs(t, a, b, x0):
-    
     factor1 = np.exp( np.multiply(-b, t) )
     factor2 = np.subtract(  x0, np.divide(a, b) )
     ret = np.multiply( factor1, factor2 )
@@ -21,11 +20,13 @@ def xs(t, a, b, x0):
 single-valued version of xs(t, a, b, x0)
 '''
 def xs_(t, a, b, x0):
-
-    ret = m.exp( -b * t )
-    ret *= x0 - a / b
-    ret +=  a/b
-    return ret
+    if b == 0:
+        return x0 + a*t
+    else:
+        ret = m.exp( -b * t )
+        ret *= x0 - a / b
+        ret +=  a/b
+        return ret
 
 '''
 integral of x(s, a, b, x0) from s = t0 to t1
