@@ -2,8 +2,7 @@
 Private repo for the Indoor Air group, department of Civil Engineering, University of Leeds
 
 ## To use the repo
-
-`git clone address`
+`git clone git@github.com:uol-research-private/leeds-indoor-air.git`
 
 Explain here how to add path to local repo to `PYTHONPATH` for Windows, Linux and Mac.
 
