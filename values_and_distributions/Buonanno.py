@@ -43,6 +43,8 @@ for act, val in N.items():
         nv += n*v
     NV[act] = nv
 
+print(NV)
+
 
 act_level_str = "activity level should be one of \'resting\', \'standing\', \'light exercise\', \'moderate exercise\' or \'heavy exercise\'"
 
