@@ -1,0 +1,105 @@
+\hypertarget{structTouch__Generator}{}\doxysection{Touch\+\_\+\+Generator Struct Reference}
+\label{structTouch__Generator}\index{Touch\_Generator@{Touch\_Generator}}
+Inheritance diagram for Touch\+\_\+\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structTouch__Generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a7fe8aa017ac4bf74f370783a5d2bf1ef}\label{structTouch__Generator_a7fe8aa017ac4bf74f370783a5d2bf1ef}} 
+enum class {\bfseries State} \{ {\bfseries ready}
+, {\bfseries sent\+\_\+info\+\_\+reqs}
+ \}
+\item 
+typedef std\+::tuple$<$ double, Address, Address $>$ \mbox{\hyperlink{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}{touch}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a774873bc4755fb8b65202b1c3df9758e}\label{structTouch__Generator_a774873bc4755fb8b65202b1c3df9758e}} 
+{\bfseries Touch\+\_\+\+Generator} (const std\+::string \&local\+\_\+name)
+\item 
+\mbox{\Hypertarget{structTouch__Generator_ae3d2c0083d6c4a48eb6c0b3045347828}\label{structTouch__Generator_ae3d2c0083d6c4a48eb6c0b3045347828}} 
+void {\bfseries delta\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a86247e606f1936d42fa470a7fb79cb5c}\label{structTouch__Generator_a86247e606f1936d42fa470a7fb79cb5c}} 
+void {\bfseries delta\+\_\+ext} (double e, const adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&xb)
+\item 
+\mbox{\Hypertarget{structTouch__Generator_ae325cbb5f200b5614dfde29b860f9627}\label{structTouch__Generator_ae325cbb5f200b5614dfde29b860f9627}} 
+void {\bfseries delta\+\_\+conf} (const adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&xb)
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a521247832a250307e0420454db305e25}\label{structTouch__Generator_a521247832a250307e0420454db305e25}} 
+void {\bfseries output\+\_\+func} (adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&yb)
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a0d726820a97427ceba89d1628c2eae93}\label{structTouch__Generator_a0d726820a97427ceba89d1628c2eae93}} 
+double {\bfseries ta} ()
+\item 
+\mbox{\Hypertarget{structTouch__Generator_ae4a6ac8ca3c87b26feff93a05a0a75b1}\label{structTouch__Generator_ae4a6ac8ca3c87b26feff93a05a0a75b1}} 
+void {\bfseries gc\+\_\+output} (adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&g)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a0091eefa70ecdce0acddb64f8f1b6e1f}\label{structTouch__Generator_a0091eefa70ecdce0acddb64f8f1b6e1f}} 
+State {\bfseries state}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_ae9be21217a1c10acf593fdf43651cefe}\label{structTouch__Generator_ae9be21217a1c10acf593fdf43651cefe}} 
+unsigned char {\bfseries received}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a45927c3e22d1ff43f9e1f4a10eba771a}\label{structTouch__Generator_a45927c3e22d1ff43f9e1f4a10eba771a}} 
+Address {\bfseries addr\+\_\+1}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a51c755a719859c10f33924667222a55f}\label{structTouch__Generator_a51c755a719859c10f33924667222a55f}} 
+Address {\bfseries addr\+\_\+2}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a5517071a0ba6e9aad84bfb9606888a5c}\label{structTouch__Generator_a5517071a0ba6e9aad84bfb9606888a5c}} 
+double {\bfseries load\+\_\+1}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a3ac16243f3e044b06eb30ae9513074f8}\label{structTouch__Generator_a3ac16243f3e044b06eb30ae9513074f8}} 
+double {\bfseries load\+\_\+2}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a042e85d8ca23d4f19ea3e9cb5f71eebc}\label{structTouch__Generator_a042e85d8ca23d4f19ea3e9cb5f71eebc}} 
+double {\bfseries area\+\_\+1}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_a1dc8ccf159f81b0187a455fc6cc5cb4d}\label{structTouch__Generator_a1dc8ccf159f81b0187a455fc6cc5cb4d}} 
+double {\bfseries area\+\_\+2}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_af5da2b6cfb550d79cc0211b6825ef98b}\label{structTouch__Generator_af5da2b6cfb550d79cc0211b6825ef98b}} 
+double {\bfseries lambda\+\_\+1}
+\item 
+\mbox{\Hypertarget{structTouch__Generator_ab1f4f003abc4e961ba3acbe9a5e5f624}\label{structTouch__Generator_ab1f4f003abc4e961ba3acbe9a5e5f624}} 
+double {\bfseries lambda\+\_\+2}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}{touch}} $>$ \mbox{\hyperlink{structTouch__Generator_ad48e0fe2d88934b61446625c972581d0}{touch\+\_\+queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}\label{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}} 
+\index{Touch\_Generator@{Touch\_Generator}!touch@{touch}}
+\index{touch@{touch}!Touch\_Generator@{Touch\_Generator}}
+\doxysubsubsection{\texorpdfstring{touch}{touch}}
+{\footnotesize\ttfamily typedef std\+::tuple$<$double, Address, Address$>$ \mbox{\hyperlink{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}{Touch\+\_\+\+Generator\+::touch}}}
+
+delta\+\_\+t, Address 1, Address 2 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structTouch__Generator_ad48e0fe2d88934b61446625c972581d0}\label{structTouch__Generator_ad48e0fe2d88934b61446625c972581d0}} 
+\index{Touch\_Generator@{Touch\_Generator}!touch\_queue@{touch\_queue}}
+\index{touch\_queue@{touch\_queue}!Touch\_Generator@{Touch\_Generator}}
+\doxysubsubsection{\texorpdfstring{touch\_queue}{touch\_queue}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structTouch__Generator_a426febcd8771b149a109b9e41ddc332d}{touch}}$>$ Touch\+\_\+\+Generator\+::touch\+\_\+queue}
+
+Load the queue back-\/to-\/front, so that last element is the touch that happens next
+
+If touch\+\_\+queue = \{ \{dt3, A31, A32\}, \{dt2, A21, A22\}, \{dt1, A11, A12\} \} then
+
+A11 \& A12 are touched at t + dt1, A21 \& A22 are touched at t + dt1 + dt2 etc. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/touch\+\_\+generator.\+h\item 
+src/touch\+\_\+generator.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{structContinuous__Evolve}{}\doxysection{Continuous\+\_\+\+Evolve Struct Reference}
+\label{structContinuous__Evolve}\index{Continuous\_Evolve@{Continuous\_Evolve}}
+
+
+{\ttfamily \#include $<$reservoir\+\_\+continuous\+\_\+evolver.\+h$>$}
+
+Inheritance diagram for Continuous\+\_\+\+Evolve\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structContinuous__Evolve}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{structContinuous__Evolve_a56b3f3f036aae070f85b3653c3a43a2d}{State}} \{ {\bfseries passive}
+, {\bfseries res\+\_\+info\+\_\+to\+\_\+get}
+, {\bfseries waiting}
+, {\bfseries res\+\_\+info\+\_\+to\+\_\+send}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_aaf2b8e1ad4fa922cbb652bcbd13bd635}\label{structContinuous__Evolve_aaf2b8e1ad4fa922cbb652bcbd13bd635}} 
+{\bfseries Continuous\+\_\+\+Evolve} (const std\+::string \&local\+\_\+name)
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_a2611e5cdd5f2c4ab9b9906697b04df88}\label{structContinuous__Evolve_a2611e5cdd5f2c4ab9b9906697b04df88}} 
+void {\bfseries delta\+\_\+int} ()
+\item 
+void \mbox{\hyperlink{structContinuous__Evolve_a30cde808fd63d0c87d447902409dadfc}{delta\+\_\+ext}} (double e, const adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&xb)
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_ae0116dbc6640393cdf12e67b9fcd38bf}\label{structContinuous__Evolve_ae0116dbc6640393cdf12e67b9fcd38bf}} 
+void {\bfseries delta\+\_\+conf} (const adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&xb)
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_a766907a975bd08cf8887eee9910eea92}\label{structContinuous__Evolve_a766907a975bd08cf8887eee9910eea92}} 
+double {\bfseries ta} ()
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_a3d0643700c78a42a1bd340d4b82412c9}\label{structContinuous__Evolve_a3d0643700c78a42a1bd340d4b82412c9}} 
+void {\bfseries output\+\_\+func} (adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&yb)
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_a3e2ba12308573434b741195de0beefeb}\label{structContinuous__Evolve_a3e2ba12308573434b741195de0beefeb}} 
+void {\bfseries gc\+\_\+output} (adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&g)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_acd6db94d7a90dea5fa50dc55add9565a}\label{structContinuous__Evolve_acd6db94d7a90dea5fa50dc55add9565a}} 
+std\+::map$<$ Address, std\+::pair$<$ std\+::string, int $>$ $>$ $\ast$ {\bfseries reservoir\+\_\+table}
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_acb0c6ec2108107b15a9bb2631ecce0ba}\label{structContinuous__Evolve_acb0c6ec2108107b15a9bb2631ecce0ba}} 
+gsl\+\_\+spmatrix $\ast$ {\bfseries Z}
+\item 
+\mbox{\Hypertarget{structContinuous__Evolve_a0febdfe5e2ddb7d4fda5453db4c6b98f}\label{structContinuous__Evolve_a0febdfe5e2ddb7d4fda5453db4c6b98f}} 
+\mbox{\hyperlink{structContinuous__Evolve_a56b3f3f036aae070f85b3653c3a43a2d}{State}} {\bfseries state}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Maintains,
+
+
+\begin{DoxyEnumerate}
+\item an index of all reservoirs from \textquotesingle{}/\textquotesingle{} downwards (build me after construction, before running simulator). 
+\end{DoxyEnumerate}
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structContinuous__Evolve_a56b3f3f036aae070f85b3653c3a43a2d}\label{structContinuous__Evolve_a56b3f3f036aae070f85b3653c3a43a2d}} 
+\index{Continuous\_Evolve@{Continuous\_Evolve}!State@{State}}
+\index{State@{State}!Continuous\_Evolve@{Continuous\_Evolve}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structContinuous__Evolve_a56b3f3f036aae070f85b3653c3a43a2d}{Continuous\+\_\+\+Evolve\+::\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Updates Z on request Performs contevolve by cycling through\+:
+
+
+\begin{DoxyEnumerate}
+\item Cycle 1, (external) do the contevolve! state = res\+\_\+info\+\_\+to\+\_\+get
+\item Cycle 2, (output) \mbox{\hyperlink{structreservoir__get}{reservoir\+\_\+get(s)}} (internal) state = waiting
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Cycle 3, Reservoirs receive the \mbox{\hyperlink{structreservoir__get}{reservoir\+\_\+get(s)}} and respond
+\item Cycle 4, (external) \mbox{\hyperlink{structreservoir__info}{reservoir\+\_\+info(s)}} update y\mbox{[}\mbox{]}, do the contevolve, state = res\+\_\+info\+\_\+to\+\_\+send
+\item Cycle 5, (output) \mbox{\hyperlink{structreservoir__info}{reservoir\+\_\+info(s)}}, (internal) state = passive 
+\end{DoxyEnumerate}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structContinuous__Evolve_a30cde808fd63d0c87d447902409dadfc}\label{structContinuous__Evolve_a30cde808fd63d0c87d447902409dadfc}} 
+\index{Continuous\_Evolve@{Continuous\_Evolve}!delta\_ext@{delta\_ext}}
+\index{delta\_ext@{delta\_ext}!Continuous\_Evolve@{Continuous\_Evolve}}
+\doxysubsubsection{\texorpdfstring{delta\_ext()}{delta\_ext()}}
+{\footnotesize\ttfamily void Continuous\+\_\+\+Evolve\+::delta\+\_\+ext (\begin{DoxyParamCaption}\item[{double}]{e,  }\item[{const adevs\+::\+Bag$<$ \mbox{\hyperlink{structMessage}{Envelope}} $>$ \&}]{xb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyEnumerate}
+\item Make any requested changes to Z -\/ don\textquotesingle{}t know how yet
+\item Process all the \mbox{\hyperlink{structreservoir__info}{reservoir\+\_\+info(s)}}
+\item Do a cont\+\_\+evolve
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{classTreeAtomic}{Tree\+Atomic}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/reservoir\+\_\+continuous\+\_\+evolver.\+h\item 
+src/reservoir\+\_\+continuous\+\_\+evolver.\+cc\end{DoxyCompactItemize}
