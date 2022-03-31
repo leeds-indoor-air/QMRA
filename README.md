@@ -1,10 +1,15 @@
-# leeds-indoor-air
-Private repo for the Indoor Air group, department of Civil Engineering, University of Leeds
+# PROTECT-NCS WP2.1.1
+Code repository for the National Core Study PROTECT project, work package 2.1.1.
+
+Contains code and Jupyter notebooks for
+- the simple three-route QMRA model
+- QMRA / queue model of a public toilet
+- useful data from publications (in `values_and_distributions/`)
 
 ## To use the repo
-`git clone git@github.com:uol-research-private/leeds-indoor-air.git`
+- `git clone git@github.com:uol-research-private/QMRA.git`
 
-Explain here how to add path to local repo to `PYTHONPATH` for Windows, Linux and Mac.
+- append "/path/to/QMRA/helper_functions" and "/path/to/QMRA/values_and_distributions" to your PYTHONPATH environment variable.
 
 ## `helper_functions/`
 
@@ -24,19 +29,4 @@ such that
 calculate airborne pathogen concentration and exposure risk in small multi-occupancy spaces.  These functions are used in the toilet block QMRA airborne 
 expousre risk model.
 
-## `values_and_distributions/`
-
-**`Buonanno.py`**
-
-**`Chen_Bobrovitz_2020.py`**
-
-**`Jones_et_al_2021.py`**
-
-**`Chen_2020.py`**
-
-**`Duguid_1946.py`**
-
-**`pulmonary_rate.py`**
-
-**`van_Doremalen_2020.py`**
 
