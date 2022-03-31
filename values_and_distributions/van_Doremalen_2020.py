@@ -1,5 +1,5 @@
 '''
-van Doremalen, N, Bushmaker, T, Morris, DH. (2020). Aerosol and Surface Stability of SARS-CoV-2 as Compared with SARS-CoV-1
+van Doremalen, N, Bushmaker, T, Morris, DH., et al. (2020). Aerosol and Surface Stability of SARS-CoV-2 as Compared with SARS-CoV-1
 
 for example,
 
