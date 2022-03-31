@@ -1,6 +1,6 @@
 import math as m
 '''
-From Duguid 1946 (via Excel model)
+From Duguid, J. The size and the duration of air-carriage of respiratory droplets and droplet-nuclei (1946)
 '''
 diameter_small = [1.5, 3, 6, 12, 20] #micron
 diameter_large = [28, 36, 45, 62.5, 87.5, 112.5, 137.5, 175, 225, 375, 750, 1500] #micron
