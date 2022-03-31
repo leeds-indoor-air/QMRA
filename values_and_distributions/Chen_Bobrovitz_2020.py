@@ -1,7 +1,7 @@
 import numpy as np
 
 '''
-SOURCE: Chen & Brobovitz (2020)
+SOURCE: Chen, P.Z., Bobrovitz, N., Premji, Z. Heterogeneity in transmissibility and shedding SARS-CoV-2 via droplets and aerosols (2020)
 
 import time
 seed = int(time.time())
