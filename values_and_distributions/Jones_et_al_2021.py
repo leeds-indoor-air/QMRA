@@ -1,7 +1,7 @@
 import fit_normal_to_quantiles as fit
 import numpy as np
 '''
-Source: Estimating infectiousness throughout SARS-CoV-2 infection course. Jones et al. 2021
+Source: Jones, T.C., Biele, G., Mühlemann, B. infectiousness throughout SARS-CoV-2 infection course. Jones et al. (2021)
 '''
 
 '''
